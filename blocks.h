@@ -11,7 +11,7 @@ static const Block blocks[] = {
 	//{"", "bandwidth", 5, 0},
 	//{"", "free -h | awk '/Mem:/{print $3}' | sed 's/i//'", 5, 0},
 	//{"", "mpstat 1 1 | awk 'END{print 100-$NF\"%\"}'", 5, 0},
-	//{"", "sensors | awk '/Package id 0:/{print $4}' | sed 's/+//'", 5, 0},
+	{"", "sensors | awk '/Package id 0:/{print $4}' | sed 's/+//'", 5, 0},
 	{"","pactl list sources | awk '/Mute/ {print $2 }' | tail -1", 0, 10},
 	{"", "pamixer --get-volume-human", 0, 10},
 	{"", "light | awk '{b=int($1+0.5);print b\"%\"}'", 0, 11},
